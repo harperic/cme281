@@ -1,0 +1,19 @@
+# For ease of use and simplicity of display, I have
+# create a separate file that will contain all the
+# Cahn-Hilliard math. This also shows how easy it
+# is to import a python function from another file
+
+import numpy as np
+
+def delF(F, dx):
+    """
+    Compute the Laplacian of the concentration as required
+    by the Cahn-Hilliard equation. In this case
+    We use a "stencil" or "kernel" to perform
+    the operation. Note this automatically handles
+    the periodic boundary condition.
+    :param F: Discrete concentration (image)
+    :param dx: pixel size of F (assumed to be square
+    :type F: numpy array
+    :type dx: float
+    """
